@@ -59,7 +59,12 @@ export class Session {
         }
     }
 
-    
-    
+}
 
+export class Difficulty {
+    constructor (maxTop, maxBot){
+        this.maxTop = maxTop;
+        this.maxBot = maxBot;
+    }
+    
 }

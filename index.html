@@ -1,30 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="./css/css/home.css">
+    <link rel="stylesheet" href="./css/home.css">
     <title>Mobile Math Flashcards </title>
 </head>
 <body>
 
-    <div class="header"></div>
+    <div class="header">
+        <h1>Mobile Math Flashcards</h1>
+    </div>
 
     <div class="body">
         <div class="sessionSetup">
-            <div class="difficultySelector"></div>
+            <div class="difficultySelector">
+                <input id="difLow" type="button" value="Low"/>
+                <input id="difMed" type="button" value="Med"/>
+                <input id="difHard" type="button" value="Hard"/>
+            </div>
             <div class="sessionSlider">
                 Number of Flashcards: <input id="quantity"  type="range" min="1" max="100" value="10">
             </div>
-            <div class="operatorSelector"></div>
-            <div class="startButton"></div>
-            <div class="optionsButton"></div>
+            <div class="operatorSelector">
+                <input id="opAdd" type="button" value="+"/>
+                <input id="opSub" type="button" value="-"/>
+                <input id="opMult" type="button" value="x"/>
+                <input id="opDiv" type="button" value="&divide"/>
+            </div>
+            <div class="startButton">
+                <input id="start" type="button" value="Start"/>
+            </div>
+            <div class="optionsButton">
+                <input id="options" type="button" value="options"/>
+            </div>
         </div>
 
         <div class="activeSession">
             <div class="statusBar"></div>
             <div class="outputBlock"></div>
-            <div class="answerField"></div>
-            <div class="submitButton"></div>
-            <div class="quitButton"></div>
+            <div class="answerField">
+                <input type="number"/>
+            </div>
+            <div class="submitButton">
+                <input id="submit" type="button" value="Submit" />
+            </div>
+            <div class="quitButton">
+                <input id="quit" type="button" value="Quit" />
+            </div>
         </div>        
     </div>
     <script type="module" src="./js/main.js"></script>
