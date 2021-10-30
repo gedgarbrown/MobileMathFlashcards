@@ -5,49 +5,53 @@
     <title>Mobile Math Flashcards </title>
 </head>
 <body>
-
-    <div class="header">
+<div id="wrapper">
+    <div id="header" class="header">
         <h1>Mobile Math Flashcards</h1>
     </div>
 
-    <div class="body">
-        <div class="sessionSetup">
-            <div class="difficultySelector">
+    <div id="content" class="content">
+        <div id="sessionSetup" class="active">
+            <div id="difficultySelector">
                 <input id="difLow" type="button" value="Low"/>
                 <input id="difMed" type="button" value="Med"/>
                 <input id="difHard" type="button" value="Hard"/>
             </div>
-            <div class="sessionSlider">
+            <div id="sessionSlider">
                 Number of Flashcards: <input id="quantity"  type="range" min="1" max="100" value="10">
+                <span id="quantityDisplay">10</span>
             </div>
-            <div class="operatorSelector">
+            <div id="operatorSelector">
                 <input id="opAdd" type="button" value="+"/>
                 <input id="opSub" type="button" value="-"/>
                 <input id="opMult" type="button" value="x"/>
                 <input id="opDiv" type="button" value="&divide"/>
             </div>
-            <div class="startButton">
+            <div id="startButton">
                 <input id="start" type="button" value="Start"/>
             </div>
-            <div class="optionsButton">
+            <div id="optionsButton">
                 <input id="options" type="button" value="options"/>
             </div>
         </div>
 
-        <div class="activeSession">
-            <div class="statusBar"></div>
-            <div class="outputBlock"></div>
-            <div class="answerField">
+        <div id="activeSession" class="inactive">
+            <div id="statusBar"></div>
+            <div id="outputBlock"></div>
+            <div id="answerField">
                 <input type="number"/>
             </div>
-            <div class="submitButton">
+            <div id="submitButton">
                 <input id="submit" type="button" value="Submit" />
             </div>
-            <div class="quitButton">
+            <div id="quitButton">
                 <input id="quit" type="button" value="Quit" />
             </div>
         </div>        
     </div>
-    <script type="module" src="./js/main.js"></script>
+</div>
+
+<script type="module" src="./js/main.js"></script>
+
 </body>
 </html>

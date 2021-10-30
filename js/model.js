@@ -43,6 +43,10 @@ export class Flashcard {
 
 }
 
+/*******************************************************************
+ * Session
+ *******************************************************************/
+
 export class Session {
     constructor (quantity, operator, maxTop, maxBot) {
         this.quantity = quantity;

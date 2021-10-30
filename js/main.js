@@ -1,6 +1,10 @@
-//import Controller from "./controller.js";
+import Controller from "./controller.js";
 
-//controls for difficulty
+let controller = new Controller();
+
+
+
+//controls for difficulty 
 document.getElementById("difLow").addEventListener("click", () => {alert("TODO: Set difLow") });
 document.getElementById("difMed").addEventListener("click", () => {alert("TODO: Set difMed") });
 document.getElementById("difHard").addEventListener("click", () => {alert("TODO: Set difHard") });
@@ -12,9 +16,9 @@ document.getElementById("opMult").addEventListener("click", () => {alert("TODO: 
 document.getElementById("opDiv").addEventListener("click", () => {alert("TODO: Set Division") });
 
 //start and options session
-document.getElementById("start").addEventListener("click", () => {alert("TODO: Start Session") });
+document.getElementById("start").addEventListener("click", () => { controller.startSession(); });
 document.getElementById("options").addEventListener("click", () => {alert("TODO: Open Options") });
 
 //controls for session
 document.getElementById("submit").addEventListener("click", () => {alert("TODO: Submit Answer") });
-document.getElementById("quit").addEventListener("click", () => {alert("TODO: Quit Session") });
+document.getElementById("quit").addEventListener("click", () => { controller.quitSession(); });
