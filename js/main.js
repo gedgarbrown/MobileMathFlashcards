@@ -8,6 +8,8 @@ let controller = new Controller();
 document.getElementById("difLow").addEventListener("click", () => {alert("TODO: Set difLow") });
 document.getElementById("difMed").addEventListener("click", () => {alert("TODO: Set difMed") });
 document.getElementById("difHard").addEventListener("click", () => {alert("TODO: Set difHard") });
+document.getElementById("quantity").addEventListener("input", () => {controller.updateQuantity(); }); 
+
 
 //controls for operator
 document.getElementById("opAdd").addEventListener("click", () => {alert("TODO: Set Addition") });

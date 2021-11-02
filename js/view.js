@@ -17,5 +17,11 @@ export default class View {
         
     }
 
+    changeRangeQuantity(rangeQ){
+
+        document.getElementById("quantityDisplay").innerText= rangeQ;
+
+    }
+
    
 }
