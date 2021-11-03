@@ -12,10 +12,19 @@ document.getElementById("quantity").addEventListener("input", () => {controller.
 
 
 //controls for operator
-document.getElementById("opAdd").addEventListener("click", () => {alert("TODO: Set Addition") });
-document.getElementById("opSub").addEventListener("click", () => {alert("TODO: Set Subtraction") });
-document.getElementById("opMult").addEventListener("click", () => {alert("TODO: Set Multiplication") });
-document.getElementById("opDiv").addEventListener("click", () => {alert("TODO: Set Division") });
+document.getElementById("opAdd").addEventListener("click", () => {
+    controller.setOperator(document.getElementById("opAdd").id);
+});
+document.getElementById("opSub").addEventListener("click", () => {
+    controller.setOperator(document.getElementById("opSub").id);
+});
+document.getElementById("opMult").addEventListener("click", () => {
+    controller.setOperator(document.getElementById("opMult").id);
+});
+document.getElementById("opDiv").addEventListener("click", () => {
+    controller.setOperator(document.getElementById("opDiv").id);
+});
+
 
 //start and options session
 document.getElementById("start").addEventListener("click", () => { controller.startSession(); });

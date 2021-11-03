@@ -23,5 +23,17 @@ export default class View {
 
     }
 
+    unselectButton(id){
+        let button = document.getElementById(id);
+        button.classList.remove("btnSelected");
+        button.classList.add("btnUnselected");
+    }
+
+    selectButton(id){
+        let button = document.getElementById(id);
+        button.classList.add("btnSelected");
+        button.classList.remove("btnUnselected");
+    }
+
    
 }

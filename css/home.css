@@ -80,3 +80,11 @@ html, body {
 .inactive {
     display: none;
 }
+
+.btnSelected {
+    background-color: mediumseagreen;
+}
+
+.btnUnselected {
+    background-color: slategray
+}
