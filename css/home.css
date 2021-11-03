@@ -78,8 +78,8 @@ html, body {
 }
 .opButton {
     background: #999;
-    padding: 5px;
-    margin: 5px;
+    padding: 15px;
+    margin: 15px;
     border-radius: 12px;
     color: white;
     text-decoration: none;
@@ -125,4 +125,14 @@ html, body {
 
 .inactive {
     display: none;
+}
+
+.btnSelected {
+    background-color: mediumseagreen;
+    box-shadow: 5px 10px seagreen;
+}
+
+.btnUnselected {
+    background-color: slategray;
+    box-shadow: 2.5px 5px darkslategray;
 }
