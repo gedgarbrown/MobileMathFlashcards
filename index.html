@@ -13,12 +13,13 @@
     <div id="content" class="content">
         <div id="sessionSetup" class="active">
             <div id="difficultySelector">
-                <input id="difLow" type="button" value="Low"/>
-                <input id="difMed" type="button" value="Med"/>
-                <input id="difHard" type="button" value="Hard"/>
+                <input class="difButton" id="difLow" type="button" value="Low"/>
+                <input class="difButton" id="difMed" type="button" value="Med"/>
+                <input class="difButton" id="difHard" type="button" value="Hard"/>
             </div>
             <div id="sessionSlider">
-                Number of Flashcards: <input id="quantity"  type="range" min="1" max="100" value="10">
+                <span id="sliderTitle">Number of Flash Cards</span>
+                <input id="quantity"  type="range" min="1" max="100" value="10">
                 <span id="quantityDisplay">10</span>
             </div>
             <div id="operatorSelector">
