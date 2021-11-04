@@ -54,7 +54,8 @@ export class Session {
         this.maxTop = maxTop;
         this.maxBot = maxBot;
         this.flaschcards = [];
-        
+        this.operator = operator; 
+
         for (let i = 0; i < quantity; i++) {
             let t = Math.random() * (maxTop + 1);
             let b = Math.random() * (maxBot + 1);
@@ -65,8 +66,12 @@ export class Session {
 
 }
 
+/*******************************************************************
+ * Session
+ *******************************************************************/
+
 export class Difficulty {
-    constructor (maxTop, maxBot){
+    constructor (maxTop, maxBot) {
         this.maxTop = maxTop;
         this.maxBot = maxBot;
     }

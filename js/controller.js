@@ -1,16 +1,48 @@
-//import Flashcard from "./model.js";
+import {Flashcard, Difficulty, Session, }  from "./model.js";
 import View from "./view.js"
+
 
 export default class Controller {
     constructor () {
-       this.view = new View();
-       this.cardsPerSession = document.getElementById("quantity").value;
-       this.operator = 0;
+        this.view = new View();
+        this.cardsPerSession = document.getElementById("quantity").value;
+        this.operator = 0;
+        this.opRef = ["+", "-", "x", "&divide;"];
+        this.difficulty = 0;
+        this.difSettings = [];
+
+        this.difSettings.push(new Difficulty(10, 10));
+        this.difSettings.push(new Difficulty(20, 20));
+        this.difSettings.push(new Difficulty(100, 100));
+       
     }
 
-    setDif(dif) {
+    setDifficulty(id){
+        this.view.selectButton(id);
 
-        this.difficulty = dif;
+
+        switch(id){
+            case "difLow":
+                this.difficulty = 0;
+                this.view.unselectButton("difMed");
+                this.view.unselectButton("difHard");
+            break;   
+             case "difMed":
+                this.difficulty = 1;
+                this.view.unselectButton("difLow");
+                this.view.unselectButton("difHard");
+            break;  
+             case "difHard":
+                this.difficulty = 2;
+                this.view.unselectButton("difLow");
+                this.view.unselectButton("difMed");
+            break;  
+            default:
+            break;
+        }
+        
+        console.log("Operator: ", this.operator);
+
 
     }
 
@@ -44,6 +76,8 @@ export default class Controller {
                 this.view.unselectButton("opMult");
                 this.view.unselectButton("opAdd");
              break;  
+             default:
+             break;
         }
         
         console.log("Operator: ", this.operator);
@@ -76,4 +110,23 @@ export default class Controller {
         this.view.changeDisplay(active, inactive);
 
     }
+
+    openOptions() {
+        this.view.openModal("optionsModal");
+        
+           
+    }
+
+    closeOptions() {
+        this.view.closeModal("optionsModal");
+        
+    }
+
+    windowClick(event) {
+        if (event.target == document) {
+           this.closeOptions();
+          }
+    }
+
+
 }

@@ -35,5 +35,14 @@ export default class View {
         button.classList.remove("btnUnselected");
     }
 
+    openModal(id) {
+        document.getElementById(id).style.display = "block";
+
+    }
+
+    closeModal(id) {
+        document.getElementById(id).style.display = "none";
+    }
+
    
 }
