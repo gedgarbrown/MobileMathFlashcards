@@ -11,6 +11,8 @@
     </div>
 
     <div id="content" class="content">
+
+         <!-- Setup Display-->
         <div id="sessionSetup" class="active">
             <div id="difficultySelector">
                 <input class="btnSelected" id="difLow" type="button" value="Low"/>
@@ -36,8 +38,11 @@
             </div>
         </div>
 
+         <!-- Session Display-->
         <div id="activeSession" class="inactive">
-            <div id="statusBar"></div>
+            <div id="statusBar">
+                Flashcard: <span id="card#"></span>
+            </div>
             <div id="outputBlock"></div>
             <div id="answerField">
                 <input type="number"/>
@@ -49,6 +54,8 @@
                 <input id="quit" type="button" value="Quit" />
             </div>
         </div>  
+
+        <!-- Options Modal-->
         <div id="optionsModal" class="modal">
            <div class="modalContent">
                <span id="optionsClose" class="modalClose">&times;</span>

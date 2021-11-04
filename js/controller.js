@@ -14,7 +14,9 @@ export default class Controller {
         this.difSettings.push(new Difficulty(10, 10));
         this.difSettings.push(new Difficulty(20, 20));
         this.difSettings.push(new Difficulty(100, 100));
-       
+        this.session = new Session(this.cardsPerSession, 0, 10, 10);
+
+        this.currentCard = 0;
     }
 
     setDifficulty(id){
@@ -80,7 +82,7 @@ export default class Controller {
              break;
         }
         
-        console.log("Operator: ", this.operator);
+        console.log("Operator: ", this.operator); //debugging
 
     }
 
@@ -95,11 +97,18 @@ export default class Controller {
     }
 
     startSession() {
+        //change view to session
         let active = "activeSession";
         let inactive ="sessionSetup";
-
         this.view.changeDisplay(active, inactive);
         
+        let maxTop = this.difSettings[this.difficulty].maxTop;
+        let maxBot = this.difSettings[this.difficulty].maxBot
+        this.session = new Session(this.cardsPerSession, this.operator, maxTop, maxBot);
+
+
+        console.log(this.session) //debugging
+
     }
 
     quitSession() {

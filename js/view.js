@@ -44,5 +44,12 @@ export default class View {
         document.getElementById(id).style.display = "none";
     }
 
+    displayFlashcard(numTop,numBot, operator) {
+
+        
+
+    }
+
+
    
 }

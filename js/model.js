@@ -6,6 +6,7 @@ export class Flashcard {
         this.top = top;
         this.bot = bot;
         this.operator = operator;
+        this.opRef = ["+", "-", "x", "&divide;"];
 
         if (operator == 1 && this.top < this.bot ){
             this.top = bot;
@@ -57,8 +58,8 @@ export class Session {
         this.operator = operator; 
 
         for (let i = 0; i < quantity; i++) {
-            let t = Math.random() * (maxTop + 1);
-            let b = Math.random() * (maxBot + 1);
+            let t = Math.floor(Math.random() * (maxTop + 1));
+            let b = Math.floor(Math.random() * (maxBot + 1));
             let tempCard = new Flashcard(this.operator, t, b);
             this.flaschcards.push(tempCard);
         }
@@ -67,7 +68,7 @@ export class Session {
 }
 
 /*******************************************************************
- * Session
+ * Difficulty
  *******************************************************************/
 
 export class Difficulty {
