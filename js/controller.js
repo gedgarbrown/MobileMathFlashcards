@@ -105,9 +105,57 @@ export default class Controller {
         let maxTop = this.difSettings[this.difficulty].maxTop;
         let maxBot = this.difSettings[this.difficulty].maxBot
         this.session = new Session(this.cardsPerSession, this.operator, maxTop, maxBot);
-
-
         console.log(this.session) //debugging
+        this.renderFlashcard();
+        
+
+    }
+
+    renderFlashcard(){
+
+        let i = this.session.currentCard; 
+        console.log("i = ", i);//debugging
+        console.log(this.session.flashcards);
+        console.log("Card to render: ", this.session.flashcards[i]); //debugging
+        let numTop = this.session.flashcards[i].top;
+        let numBot = this.session.flashcards[i].bot;
+        let operator = this.session.flashcards[i].getOperatorReference();
+        
+        console.log(operator);
+        
+        this.view.displayFlashcard(numTop, numBot, operator);
+    }
+
+    submitAnswer(){
+       
+        let answer = document.getElementById("answer").value;
+        console.log(answer);
+        if(answer == null){
+
+           
+            return;
+        }
+
+        document.getElementById("answer").value = null;
+
+        if(this.session.flashcards[this.session.currentCard].checkAnswer(answer)){
+            alert("Correct!");
+            this.session.score++;
+
+        } else {
+            alert("Incorrect!");
+        }
+
+        this.session.currentCard++;
+        if(this.session.currentCard >= this.session.quantity) {
+            alert("Finished. You got " + this.session.score + " right out of " + this.session.quantity);
+
+            this.quitSession();
+
+        }
+
+
+        this.renderFlashcard();
 
     }
 

@@ -44,9 +44,18 @@ export default class View {
         document.getElementById(id).style.display = "none";
     }
 
-    displayFlashcard(numTop,numBot, operator) {
+    displayFlashcard(numTop, numBot, operator) {
+        console.log("NumTop, numBot, operator", numTop, " ", numBot, " ", operator) //debugging. 
+        document.getElementById("numTop").innerText = numTop;
+        document.getElementById("operator").innerText = operator;
+        document.getElementById("numBot").innerText = numBot;
 
-        
+        document.getElementById("answerField").focus();
+
+    }
+
+    displaySessionStatus(currentCardNumber) {
+        document.getElementById("cardNumber").innerText = currentCardNumber;
 
     }
 

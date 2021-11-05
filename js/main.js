@@ -47,5 +47,10 @@ document.getElementById("optionsClose").addEventListener("click", () => {
   });*/
 
 //controls for session
-document.getElementById("submit").addEventListener("click", () => {alert("TODO: Submit Answer") });
-document.getElementById("quit").addEventListener("click", () => { controller.quitSession(); });
+document.getElementById("submit").addEventListener("click", () => {
+    controller.submitAnswer();    
+ });
+
+document.getElementById("quit").addEventListener("click", () => {
+     controller.quitSession(); 
+});

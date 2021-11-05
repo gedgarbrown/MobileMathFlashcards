@@ -41,11 +41,18 @@
          <!-- Session Display-->
         <div id="activeSession" class="inactive">
             <div id="statusBar">
-                Flashcard: <span id="card#"></span>
+                Flashcard: <span id="cardNum"></span>
             </div>
-            <div id="outputBlock"></div>
+            <div id="outputBlock">
+                <div id="flashcard">
+                    <div class="cardArgument" id="numTop"></div>
+                    <div id="operator"></div>
+                    <div class="cardArgument" id="numBot"></div>
+                </div>
+
+            </div>
             <div id="answerField">
-                <input type="number"/>
+                <input id="answer" type="number"/>
             </div>
             <div id="submitButton">
                 <input id="submit" type="button" value="Submit" />

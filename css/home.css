@@ -172,4 +172,22 @@ html, body {
   cursor: pointer;
 }
 
+#flashcard {
+    color: navy;
+    background-color: gold;
+    border: solid 5px navy;
+    font-size: x-large;
+    height: 150px;
+}
+
+.cardArgument {
+  text-align: center;  
+}
+
+#operator {
+    text-align: left;
+}
+
+
+
 
