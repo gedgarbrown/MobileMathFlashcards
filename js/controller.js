@@ -124,15 +124,16 @@ export default class Controller {
         console.log(operator);
         
         this.view.displayFlashcard(numTop, numBot, operator);
+        this.view.displaySessionStatus(i, this.session.score);
     }
 
     submitAnswer(){
        
         let answer = document.getElementById("answer").value;
-        console.log(answer);
-        if(answer == null){
+        console.log("Submitted Answer: ", answer); //debugging
 
-           
+        if(answer == ""){
+            alert("Please Enter an answer!");
             return;
         }
 
@@ -151,7 +152,7 @@ export default class Controller {
             alert("Finished. You got " + this.session.score + " right out of " + this.session.quantity);
 
             this.quitSession();
-
+            return;
         }
 
 

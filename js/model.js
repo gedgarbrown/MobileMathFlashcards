@@ -20,9 +20,9 @@ export class Flashcard {
     }
 
     getAnswer() {
-        let answer = 0;
-
-        switch (operator) {
+       let answer = 0; 
+       
+        switch (this.operator) {
             case 0:
                 answer = this.top + this.bot;
             break;
@@ -40,12 +40,15 @@ export class Flashcard {
             break;
         }
 
+
+
         return answer;
     }
 
     checkAnswer(answer){
-        let correctAnswer = this.getAnswer();
 
+        let correctAnswer = this.getAnswer();
+        console.log("Correct Answer: ",correctAnswer);
         if(correctAnswer == answer){
             return true;
         }
@@ -85,8 +88,8 @@ export class Session {
         this.currentCard = 0;
 
         for (let i = 0; i < quantity; i++) {
-            let t = Math.floor(Math.random() * (maxTop + 1));
-            let b = Math.floor(Math.random() * (maxBot + 1));
+            let t = Math.floor(Math.random() * (maxTop)) + 1;
+            let b = Math.floor(Math.random() * (maxBot)) + 1;
             let tempCard = new Flashcard(this.operator, t, b);
             this.flashcards.push(tempCard);
         }

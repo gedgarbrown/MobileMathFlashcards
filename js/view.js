@@ -50,13 +50,13 @@ export default class View {
         document.getElementById("operator").innerText = operator;
         document.getElementById("numBot").innerText = numBot;
 
-        document.getElementById("answerField").focus();
+        document.getElementById("answer").focus();
 
     }
 
-    displaySessionStatus(currentCardNumber) {
-        document.getElementById("cardNumber").innerText = currentCardNumber;
-
+    displaySessionStatus(currentCardNumber, score) {
+        document.getElementById("cardNum").innerText = currentCardNumber;
+        document.getElementById("score").innerText = score;
     }
 
 
