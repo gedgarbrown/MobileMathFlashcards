@@ -140,11 +140,13 @@ export default class Controller {
         document.getElementById("answer").value = null;
 
         if(this.session.flashcards[this.session.currentCard].checkAnswer(answer)){
-            alert("Correct!");
+            //alert("Correct!");
+
+            this.view.displayAnswerModal("Correct", "green");
             this.session.score++;
 
         } else {
-            alert("Incorrect!");
+            this.view.displayAnswerModal("Incorrect", "crimson");
         }
 
         this.session.currentCard++;

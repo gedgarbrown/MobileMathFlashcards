@@ -59,6 +59,21 @@ export default class View {
         document.getElementById("score").innerText = score;
     }
 
+    displayAnswerModal(feedbackText, color) {
+        let answerModal =  document.getElementById("answerModalWrapper");
+        answerModal.style.display = "block";
+        
+        let modalMessage = document.getElementById("answerModalMessage")
+        modalMessage.innerText = feedbackText;
+
+        document.getElementById("answerModal").style.color = color;
+
+        setTimeout(() => { 
+            answerModal.style.display = "none"; 
+            modalMessage.innerText = "";   
+        }, 3000);
+    }
+
 
    
 }

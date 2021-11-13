@@ -14,8 +14,14 @@ export class Flashcard {
             this.bot = top;
         }
 
-        if (operator == 3 && this.bot < 1) {
-            this.bot = 1;
+        if (operator == 3){
+            if(this.bot < 1) {
+             this.bot = 1;
+            }
+
+           this.top = top * bot; 
+     
+            
         }
     }
 
