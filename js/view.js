@@ -44,12 +44,12 @@ export default class View {
         document.getElementById(id).style.display = "none";
     }
 
-    async displayOptionsValues(difSettings) {
+    displayOptionsValues(difSettings) {
 
         let lowBot = document.getElementById("lowBot");
-        let lowTop = document.getElementById("lowMax");
+        let lowTop = document.getElementById("lowTop");
         let medBot = document.getElementById("medBot");
-        let medTop = document.getElementById("medMax");
+        let medTop = document.getElementById("medTop");
         let hardBot = document.getElementById("hardBot");
         let hardTop = document.getElementById("hardTop");
 
@@ -58,7 +58,8 @@ export default class View {
         medBot.value = difSettings[1].maxBot;
         medTop.value = difSettings[1].maxTop;
         hardBot.value = difSettings[2].maxBot;
-        hardTop.value = difSettings[2].medTop;
+        console.log(difSettings);
+        hardTop.value = difSettings[2].maxTop;
 
     }
 

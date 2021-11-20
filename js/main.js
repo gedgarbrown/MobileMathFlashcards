@@ -45,7 +45,7 @@ document.getElementById("optionsClose").addEventListener("click", () => {
     controller.closeOptions();
 })
 
-document.getElementById("optionsClose").addEventListener("click", () => {
+document.getElementById("optionsSave").addEventListener("click", () => {
     controller.updateDifficulties();
     controller.closeOptions();
 })

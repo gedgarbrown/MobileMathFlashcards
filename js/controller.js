@@ -21,9 +21,9 @@ export default class Controller {
 
     updateDifficulties() {
         let lowBot = document.getElementById("lowBot");
-        let lowTop = document.getElementById("lowMax");
+        let lowTop = document.getElementById("lowTop");
         let medBot = document.getElementById("medBot");
-        let medTop = document.getElementById("medMax");
+        let medTop = document.getElementById("medTop");
         let hardBot = document.getElementById("hardBot");
         let hardTop = document.getElementById("hardTop");
 
@@ -191,7 +191,10 @@ export default class Controller {
 
     openOptions() {
 
-       this.view.openModal("optionsModal")
+    
+    this.view.openModal("optionsModal");
+    
+    this.view.displayOptionsValues(this.difSettings);
           
     }
 
