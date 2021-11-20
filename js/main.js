@@ -63,3 +63,7 @@ document.getElementById("submit").addEventListener("click", () => {
 document.getElementById("quit").addEventListener("click", () => {
      controller.quitSession(); 
 });
+
+document.getElementById("resultsClose").addEventListener("click", () => {
+    controller.closeResults();
+})

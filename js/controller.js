@@ -169,7 +169,7 @@ export default class Controller {
 
         this.session.currentCard++;
         if(this.session.currentCard >= this.session.quantity) {
-            alert("Finished. You got " + this.session.score + " right out of " + this.session.quantity);
+            //alert("Finished. You got " + this.session.score + " right out of " + this.session.quantity);
 
             this.quitSession();
             return;
@@ -186,6 +186,11 @@ export default class Controller {
         let active ="sessionSetup";
 
         this.view.changeDisplay(active, inactive);
+       
+        let resultsMessage = this.session.score + "correct out of " + this.session.quantity;
+
+        this.view.displayResults(resultsMessage);
+        
 
     }
 
@@ -200,6 +205,11 @@ export default class Controller {
 
     closeOptions() {
         this.view.closeModal("optionsModal");
+        
+    }
+
+    closeResults() {
+        this.view.closeModal("resultsModalWrapper");
         
     }
 

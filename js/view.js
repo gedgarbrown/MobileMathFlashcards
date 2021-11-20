@@ -93,6 +93,16 @@ export default class View {
         }, 3000);
     }
 
+    displayResults(resultsMessage) {
+
+        
+        setTimeout(() => { 
+            this.openModal("resultsModalWrapper");
+            document.getElementById("results").innerText = resultsMessage;
+        }, 3500);
+
+    }
+
 
    
 }
