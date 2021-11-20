@@ -33,11 +33,20 @@ document.getElementById("opDiv").addEventListener("click", () => {
 
 
 //start Session
-document.getElementById("start").addEventListener("click", () => { controller.startSession(); });
-document.getElementById("options").addEventListener("click", () => {controller.openOptions(); });
+document.getElementById("start").addEventListener("click", () => {
+    controller.startSession(); 
+});
+document.getElementById("options").addEventListener("click", () => {
+    controller.openOptions();
+ });
 
 //controlls for Options
 document.getElementById("optionsClose").addEventListener("click", () => {
+    controller.closeOptions();
+})
+
+document.getElementById("optionsClose").addEventListener("click", () => {
+    controller.updateDifficulties();
     controller.closeOptions();
 })
 

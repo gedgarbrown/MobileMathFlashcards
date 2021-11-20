@@ -44,6 +44,24 @@ export default class View {
         document.getElementById(id).style.display = "none";
     }
 
+    async displayOptionsValues(difSettings) {
+
+        let lowBot = document.getElementById("lowBot");
+        let lowTop = document.getElementById("lowMax");
+        let medBot = document.getElementById("medBot");
+        let medTop = document.getElementById("medMax");
+        let hardBot = document.getElementById("hardBot");
+        let hardTop = document.getElementById("hardTop");
+
+        lowBot.value = difSettings[0].maxBot;
+        lowTop.value = difSettings[0].maxTop;
+        medBot.value = difSettings[1].maxBot;
+        medTop.value = difSettings[1].maxTop;
+        hardBot.value = difSettings[2].maxBot;
+        hardTop.value = difSettings[2].medTop;
+
+    }
+
     displayFlashcard(numTop, numBot, operator) {
         console.log("NumTop, numBot, operator", numTop, " ", numBot, " ", operator) //debugging. 
         document.getElementById("numTop").innerText = numTop;

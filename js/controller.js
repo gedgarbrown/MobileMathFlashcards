@@ -19,6 +19,24 @@ export default class Controller {
         this.currentCard = 0;
     }
 
+    updateDifficulties() {
+        let lowBot = document.getElementById("lowBot");
+        let lowTop = document.getElementById("lowMax");
+        let medBot = document.getElementById("medBot");
+        let medTop = document.getElementById("medMax");
+        let hardBot = document.getElementById("hardBot");
+        let hardTop = document.getElementById("hardTop");
+
+        this.difSettings[0].maxBot = lowBot.value;
+        this.difSettings[0].maxTop = lowTop.value;
+        this.difSettings[1].maxBot = medBot.value;
+        this.difSettings[1].maxTop = medTop.value;
+        this.difSettings[2].maxBot = hardBot.value;
+        this.difSettings[2].medTop = hardTop.value;
+
+
+    }
+
     setDifficulty(id){
         this.view.selectButton(id);
 
@@ -172,9 +190,9 @@ export default class Controller {
     }
 
     openOptions() {
-        this.view.openModal("optionsModal");
-        
-           
+
+       this.view.openModal("optionsModal")
+          
     }
 
     closeOptions() {
