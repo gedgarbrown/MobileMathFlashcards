@@ -187,7 +187,7 @@ export default class Controller {
 
         this.view.changeDisplay(active, inactive);
        
-        let resultsMessage = this.session.score + "correct out of " + this.session.quantity;
+        let resultsMessage = this.session.score + " correct out of " + this.session.quantity;
 
         this.view.displayResults(resultsMessage);
         

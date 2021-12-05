@@ -41,10 +41,13 @@
          <!-- Session Display-->
         <div id="activeSession" class="inactive">
             <div id="statusBar">
-                <div>
+                <div class="statusItem">
                      Flashcard: <span id="cardNum"></span>
                 </div>
                 <div>
+                    &nbsp;
+                </div>
+                <div class="statusItem">
                     Score: <span id="score"></span>
                 </div>
                
@@ -72,39 +75,43 @@
         <div id="optionsModal" class="modal">
            <div class="modalContent">
             <span id="optionsClose" class="modalClose">&times;</span>
-               <div>
-                   Options:
+               <div id="optionsContentWrapper">
+                   <span id="optionsTitle">Options:</span>
                     <div>
-                        Low:
+                        <span class="optionsIndex">Low:</span> 
                         <div> 
                             <label for="lowBot">Bottom Max:</label>
-                            <input id="lowBot" class="numInput" type="number">
+                            <input id="lowBot" class="numInput" type="number" min="1" max="100">
                             <label for="lowTop">Top Max:</label>
-                            <input id="lowTop" class="numInput" type="number">
+                            <input id="lowTop" class="numInput" type="number"  min="1" max="100">
                             
                         </div>
                     </div>
                     <div>
-                        Med:
+                        <span class="optionsIndex">Med:</span> 
                         <div>
                             <label for="medBot">Bottom Max:</label>
-                            <input id="medBot" class="numInput" type="number">
+                            <input id="medBot" class="numInput" type="number"  min="1" max="100">
                             <label for="medTop">Top Max:</label>
-                            <input id="medTop" class="numInput" type="number">
+                            <input id="medTop" class="numInput" type="number"  min="1" max="100">
                         </div>
                         
                     </div>
                     <div>
-                        High:
+                        <span class="optionsIndex">High:</span> 
                         <div>
-                            <label for="hardBot">Bottom Max:</label>
-                            <input id="hardBot" class="numInput" type="number">
+                            <label for="hardBot">Bottom Max:</label>h
+                            <input id="hardBot" class="numInput" type="number"  min="1" max="100">
                             <label for="hardTop">Top Max:</label>
-                            <input id="hardTop" class="numInput" type="number">                            
+                            <input id="hardTop" class="numInput" type="number"  min="1" max="100">                            
                         </div>  
                     </div>
-                    <input id="optionsSave" type="button" value="Save Options">
+                    
+                   
                </div>
+               <div>
+                    <input id="optionsSave" type="button" value="Save Options">
+                </div>
            </div>
         </div>  
         

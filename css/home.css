@@ -9,36 +9,36 @@ html, body {
 }
 
 .header {
-    background: #333;
+    background: darkslategray;
     padding: 15px;
     text-align:center;
     font-size: 18px;
     font-family: sans-serif;
-    color: #fff;  
+    color: white;  
 }
 
 #wrapper {
     height: 100%;
     display: flex;
     flex-direction: column;
-    outline: 1px solid red;  
+    outline: 1px solid grey  
 }
 
 .content {
-    outline: 1px solid rgb(255, 0, 255);
+    outline: 1px solid grey;
     width: 100%;
     height: 100%;
 }
 
 #sessionSetup {
-    outline: 1px solid rgb(132, 0, 255);
+    outline: 1px solid slategray;
     width: 100%;
     height: 100%;
 }
 #difficultySelector{
     width: 100%;
     height:10%;
-    background: purple;
+    background: darkgray;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,15 +51,35 @@ html, body {
     padding: 10px;
     margin: 10px;
     flex-grow: 1;
-}
+}   
 #sessionSlider{
-    width: 100%;
-    height: 10%;
-    background: yellow;
+    width: 98%;
+    height: 15%;
+    background: darkgray;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    
+}
+
+#sliderTitle{
+    font-size: xx-large;
+    color: navy;
+    background: solid;
+}
+
+#sessionSetup {
+    background: darkgray;
+
+}
+
+#quantityDisplay {
+    background: solid darkslategray;
+    color: navy;
+    font-size: xx-large;
+    font-weight: bold;
 }
 #quantity{
     width: 60%;
@@ -67,14 +87,16 @@ html, body {
     flex-grow: 1;
 }
 #operatorSelector {
-    height: 60%;
+    height: 50%;
     margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 80%;
-    background: green;
+    max-width: 90%;
+    background: darkslategray;
+    border-radius: 25px;
+
 }
 .opButton {
     background: #999;
@@ -91,31 +113,41 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10%;
-    background: red;
+    height: 15%;
+    background: darkgrey;
 }
 #start{
     background-color: cornflowerblue;
     width: 80%;
     padding: 5px;
     border-radius: 12px;
-    color:rgb(255, 255, 255);
-    font-size: x-large;
+    color: white;
+    font-size: xx-large;
     font-weight: bold;
 }
+
+#optionsModal{
+    background: solid whitesmoke;
+    border-radius: 25px;
+    color: darkslateblue;
+    font-size: large;
+}
+
 #optionsButton{
     height: 10%;
-    background: purple;
+    background: darkslategray;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 #options{
-    background: hotpink;
+    background: silver;
     width: 50%;
     border-radius: 12px;
-    color: black;
-    font-size: large;
+    color: darkslategray;
+    font-size: xx-large;
+    text-transform: uppercase;
+
 }
 
 .active {
@@ -151,13 +183,38 @@ html, body {
   }
 
   .modalContent {
-    background-color: #fefefe;
+    background-color: silver;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%; 
+    border-radius: 25px;
+
   }
 
+#optionsTitle{
+    font-size: xx-large;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.optionsIndex{
+    font-size: large;
+    font-weight: bold;
+}
+
+#optionsSave{
+    font-size: xx-large;
+    color: white;
+    background: darkslategray;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+#optionsContentWrapper{
+    padding: 5px;
+    margin: 2px;
+}
   .modalClose {
     color: #aaa;
     float: right;
@@ -173,19 +230,27 @@ html, body {
 }
 
 .answerModal {
-    background-color: #fefefe;
+    background-color: silver;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid darkgray;
     width: 50%; 
+    font-size: xx-large;
+    border-radius: 25px;
+    font-weight: bold;
+    text-align: center;
 }
 
 #flashcard {
     color: navy;
     background-color: gold;
-    border: solid 5px navy;
-    font-size: x-large;
+    border: solid 10px navy;
+    font-size: xx-large;
     height: 150px;
+    width: 80%;
+    font-weight: bold;
+    margin: 10%;
+    border-radius: 15px;
 }
 
 .cardArgument {
@@ -194,28 +259,53 @@ html, body {
 
 #operator {
     text-align: left;
+    padding: 5px;
+    margin-left: 10%;
 }
 #statusBar{
     width: 100%;
     height:10%;
-    background: rgb(255, 165, 255);
+    background: silver;
     display: flex;
     align-items: center;
+    font-size: xx-large;
+}
+
+.statusItem{
+    background:dimgray;
+    font-size: xx-large;
+    color: white;
+    border-radius: 15px;
+    padding: 5px;
 }
 #outputBlock{
     width: 100%;
     height: 60%;
     background: gray;
     display: flex;
+    justify-content: center;
 }
 #answerField{
     height: 10%;
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    background: silver;
 }
+
+#answer{
+    font-size: xx-large;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 1%;
+}
+
 #submitButton{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 10%;
+    background: silver;
 }
 #submit{
     background-color: cornflowerblue;
@@ -226,21 +316,31 @@ html, body {
     font-size: x-large;
     font-weight: bold;
 }
+
 #quitButton{
     height: 10%;
-    background: purple;
+    background: darkslategray;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 #quit{
-    background: hotpink;
+    background: silver;
     width: 50%;
     border-radius: 12px;
-    color: black;
-    font-size: large;
+    color: darkslategray;
+    font-size: xx-large;
+    text-transform: uppercase;
 }
 
 .numInput {
-    border: solid 1 black
+    border: 1px solid black;
+   
+}
+
+#results {
+    font-size: xx-large;
+    color: green;
+    width: 100%;
+    text-align: center;
 }
